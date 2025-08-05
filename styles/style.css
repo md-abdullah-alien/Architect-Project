@@ -171,7 +171,24 @@ main > section{
 
 
 /* Facts Section Styles Ended */
+/* Sponspors Section Styles Started */
+.sponspors-info{
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
 
+.sponspors-companies{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.sponspors-companies img{
+  filter: grayscale(100%);
+}
+
+
+/* Sponspors Section Styles Ended */
 
 /* Responsive Media Query apply */
 
@@ -179,17 +196,26 @@ main > section{
 @media screen and (max-width: 576px){
   .navbar,
   .nav-links,
-  .teams-section{
+  .teams-section,
+  .sponspors-companies{
     flex-direction: column;
   }
   .team-img-container,
-  .facts-container{
+  .facts-container,
+  .sponspors-companies{
     grid-template-columns: repeat(1, 1fr);
   }
 
   .facts-container{
     justify-items: center;
+    gap: 24px;
   }
+
+  .sponspors-companies{
+    justify-items: center;
+    gap: 50px;
+  }
+
   .team-feature-container{
     margin-left: 30px;
   }
@@ -205,9 +231,15 @@ main > section{
   .team-feature-container{
     margin: 30px auto;
   }
-  .facts-container{
+  .facts-container,
+  .sponspors-companies{
     grid-template-columns: repeat(2, 1fr);
   }
+  .sponspors-companies{
+    gap: 50px;
+    justify-items: center;
+  }
+  
 }
 
 
